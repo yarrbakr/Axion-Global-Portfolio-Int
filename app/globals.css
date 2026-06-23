@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Brand palette — dark navy theme only.  Matches the AXION GLOBAL logo:
+   white fingerprint monogram on deep navy with a light-blue spark.
+--------------------------------------------------------------------------- */
+@theme {
+  --color-navy-900: #0a1730; /* page background            */
+  --color-navy-800: #0e1e3f; /* alternating section bg     */
+  --color-navy-700: #14264c; /* cards / surfaces           */
+  --color-text: #f5f8ff; /* primary text               */
+  --color-muted: #9db0d6; /* secondary text             */
+  --color-accent: #5c8ff0; /* primary blue               */
+  --color-accent-soft: #8fb6f5; /* hovers / subtle accents */
+  --color-line: rgb(255 255 255 / 0.08); /* hairline borders  */
+}
+
+/* Fonts arrive as CSS variables from next/font (wired in app/layout.tsx). */
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-navy-900);
+    color: var(--color-text);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  /* Offset anchored sections so the sticky navbar doesn't cover headings. */
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Ambient motion — kept subtle, fully disabled under reduced-motion.
+--------------------------------------------------------------------------- */
+@keyframes aurora-drift {
+  0% {
+    transform: translate3d(-6%, -4%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, 4%, 0) scale(1.18);
+  }
+  100% {
+    transform: translate3d(-6%, -4%, 0) scale(1);
+  }
+}
+
+@keyframes aurora-drift-2 {
+  0% {
+    transform: translate3d(5%, 3%, 0) scale(1.12);
+  }
+  50% {
+    transform: translate3d(-5%, -3%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(5%, 3%, 0) scale(1.12);
+  }
+}
+
+.aurora-a {
+  animation: aurora-drift 19s ease-in-out infinite;
+}
+
+.aurora-b {
+  animation: aurora-drift-2 24s ease-in-out infinite;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 34s linear infinite;
+  width: max-content;
+}
+
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+}
+
+.marquee-mask:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .aurora-a,
+  .aurora-b,
+  .marquee-track {
+    animation: none !important;
+  }
+}
