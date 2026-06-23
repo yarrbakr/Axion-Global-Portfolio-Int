@@ -106,59 +106,6 @@ export const process: ProcessStep[] = [
   { icon: "support", title: "Support", body: "We monitor, improve, and add features over time." },
 ];
 
-export type Plan = {
-  name: string;
-  priceMain: string;
-  priceSub: string;
-  blurb: string;
-  features: string[];
-  highlighted?: boolean;
-  badge?: string;
-};
-
-export const plans: Plan[] = [
-  {
-    name: "WhatsApp AI Agent — Starter",
-    priceMain: "from PKR 35,000",
-    priceSub: "setup + PKR 40,000 / month",
-    blurb: "Everything you need to put an AI agent on your WhatsApp.",
-    features: [
-      "Text support & FAQs",
-      "Product recommendations",
-      "Human handoff",
-    ],
-  },
-  {
-    name: "WhatsApp AI Agent — Growth",
-    priceMain: "from PKR 70,000",
-    priceSub: "per month",
-    blurb: "Everything in Starter, plus richer understanding and tooling.",
-    highlighted: true,
-    badge: "Most popular",
-    features: [
-      "Everything in Starter",
-      "Image & voice-note understanding",
-      "Order tracking",
-      "CRM dashboard",
-      "Priority support",
-    ],
-  },
-  {
-    name: "3D Product Visualization",
-    priceMain: "Custom — from PKR 2,500",
-    priceSub: "per product model",
-    blurb: "Photoreal, interactive 3D models for web & AR.",
-    features: [
-      "Photoreal 3D models",
-      "Web & AR ready",
-      "Great for menus & catalogs",
-    ],
-  },
-];
-
-export const pricingNote =
-  "Voice AI call agents available as an add-on (usage-based). International pricing on request.";
-
 export type TeamMember = {
   name: string;
   role: string;
@@ -193,7 +140,6 @@ export const team: TeamMember[] = [
 export const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#work", label: "Work" },
-  { href: "#pricing", label: "Pricing" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ] as const;
