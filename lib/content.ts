@@ -6,6 +6,8 @@ import { siteConfig } from "@/lib/site-config";
 
 export type IconKey =
   | "chat"
+  | "voice"
+  | "spark"
   | "cube"
   | "discover"
   | "build"
@@ -23,26 +25,40 @@ export type Service = {
 export const services: Service[] = [
   {
     icon: "chat",
-    title: "WhatsApp AI Chatbots",
-    body: "A 24/7 AI agent on your WhatsApp that answers questions, recommends products, handles returns, and captures leads — trained entirely on your business. Speaks Urdu and English, and hands off to your team when needed.",
+    title: "AI Chatbots",
+    body: "24/7 AI chat agents for WhatsApp, your website, or any channel your customers use — trained entirely on your business to answer questions, recommend products, and capture leads, with a clean handoff to your team when it matters.",
     chips: [
-      "24/7 instant replies",
+      "WhatsApp & custom channels",
+      "Trained on your business",
       "Product recommendations",
-      "Order & return handling",
-      "Understands photos & voice notes",
+      "Lead capture",
       "Human handoff",
-      "CRM dashboard",
+      "Urdu & English",
     ],
   },
   {
-    icon: "cube",
-    title: "3D Product Photogrammetry",
-    body: "We turn your products into interactive 3D models customers can spin, zoom, and explore — built from simple photos. Perfect for fashion, retail, and restaurants showcasing their dishes.",
+    icon: "voice",
+    title: "AI & Voice Assistants",
+    body: "Assistants that talk and listen — voice agents that answer calls, qualify leads, and book appointments, plus AI assistants that handle tasks and follow-ups across the tools you already use.",
     chips: [
-      "Photoreal 3D models",
-      "Web & AR ready",
-      "Higher conversions",
-      "Great for menus & catalogs",
+      "Inbound & outbound voice",
+      "Natural, on-brand speech",
+      "Appointment booking",
+      "Call qualification",
+      "Task & workflow automation",
+      "Works with your tools",
+    ],
+  },
+  {
+    icon: "spark",
+    title: "Custom AI Solutions",
+    body: "Have a problem that doesn't fit a template? We design and build bespoke AI — from document and data processing to knowledge tools and automations wired straight into your existing systems.",
+    chips: [
+      "Tailored to your workflow",
+      "Document & data AI",
+      "Knowledge & search tools",
+      "System integrations",
+      "From idea to deployment",
     ],
   },
 ];
@@ -149,9 +165,9 @@ export const marqueeItems = [
   "WhatsApp Business API",
   "OpenAI",
   "Voice AI",
-  "Three.js",
-  "WebGL / AR",
-  "Photogrammetry",
+  "Knowledge & RAG Tools",
+  "Workflow Automation",
+  "Custom Integrations",
   "CRM Dashboards",
   "Urdu & English",
 ];

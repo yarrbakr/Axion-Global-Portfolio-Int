@@ -9,11 +9,11 @@ export function Services() {
     <Section id="services" bg="navy-800">
       <SectionHeading
         eyebrow="Services"
-        title="Two ways we put AI to work"
-        intro="From always-on customer conversations to interactive 3D product experiences — built for how modern brands actually sell."
+        title="Ways we put AI to work"
+        intro="From always-on chat and voice agents to bespoke AI built around your workflow — designed for how modern brands actually operate."
       />
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
+      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service, i) => {
           const Icon = featureIcon[service.icon];
           return (

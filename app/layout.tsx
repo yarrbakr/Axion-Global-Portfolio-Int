@@ -18,9 +18,9 @@ const spaceGrotesk = Space_Grotesk({
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://axion-global.vercel.app";
 
-const title = "AXION GLOBAL — AI Chatbots & 3D Product Experiences";
+const title = "AXION GLOBAL — AI Chatbots, Voice Assistants & Custom AI";
 const description =
-  "AXION GLOBAL builds WhatsApp AI chatbots and 3D product visualizations that help brands sell more and support customers 24/7.";
+  "AXION GLOBAL builds WhatsApp AI chatbots, voice assistants, and custom AI solutions that help brands sell more and support customers 24/7.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     "WhatsApp AI",
     "WhatsApp chatbot",
     "AI automation agency",
-    "3D product visualization",
-    "photogrammetry",
+    "AI voice assistant",
+    "custom AI solutions",
     "customer support AI",
     "Pakistan",
   ],

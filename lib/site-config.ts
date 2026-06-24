@@ -4,7 +4,7 @@
  */
 export const siteConfig = {
   name: "AXION GLOBAL",
-  tagline: "AI automation studio — WhatsApp AI agents and 3D product experiences.",
+  tagline: "AI automation studio — AI chatbots, voice assistants, and custom AI solutions.",
 
   whatsappMain: "https://wa.me/923441868140", // CEO Aliyan — main CTA line
   whatsappCoo: "https://wa.me/923290384389", // COO Abu bakar

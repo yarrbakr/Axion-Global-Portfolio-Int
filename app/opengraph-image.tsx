@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "AXION GLOBAL — AI Chatbots & 3D Product Experiences";
+export const alt = "AXION GLOBAL — AI Chatbots, Voice Assistants & Custom AI";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -39,7 +39,7 @@ export default async function OpengraphImage() {
           AXION GLOBAL
         </div>
         <div style={{ marginTop: 14, fontSize: 30, color: "#9DB0D6" }}>
-          AI Chatbots &amp; 3D Product Experiences
+          AI Chatbots, Voice Assistants &amp; Custom AI
         </div>
       </div>
     ),

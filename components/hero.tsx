@@ -85,8 +85,9 @@ export function Hero() {
             variants={item}
             className="mt-6 max-w-2xl text-lg leading-relaxed text-muted"
           >
-            AXION GLOBAL builds WhatsApp AI chatbots and 3D product experiences
-            that help brands sell more and support better, around the clock.
+            AXION GLOBAL builds AI chatbots, voice assistants, and custom AI
+            solutions that help brands sell more and support better, around the
+            clock.
           </motion.p>
 
           <motion.div

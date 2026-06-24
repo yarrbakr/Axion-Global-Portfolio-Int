@@ -94,6 +94,22 @@ const ChatIcon = (p: P) => (
   </Line>
 );
 
+const VoiceIcon = (p: P) => (
+  <Line {...p}>
+    <rect x="9" y="3" width="6" height="11" rx="3" />
+    <path d="M5 11a7 7 0 0 0 14 0" />
+    <path d="M12 18v3" />
+    <path d="M9 21h6" />
+  </Line>
+);
+
+const SparkIcon = (p: P) => (
+  <Line {...p}>
+    <path d="M10 3c.5 4 1.5 5 5.5 5.5-4 .5-5 1.5-5.5 5.5-.5-4-1.5-5-5.5-5.5 4-.5 5-1.5 5.5-5.5Z" />
+    <path d="M18 13.5c.25 2 .75 2.5 2.75 2.75-2 .25-2.5.75-2.75 2.75-.25-2-.75-2.5-2.75-2.75 2-.25 2.5-.75 2.75-2.75Z" />
+  </Line>
+);
+
 const CubeIcon = (p: P) => (
   <Line {...p}>
     <path d="M12 2.5 20 7v9l-8 4.5L4 16V7l8-4.5Z" />
@@ -142,6 +158,8 @@ const SupportIcon = (p: P) => (
 
 export const featureIcon: Record<IconKey, FC<P>> = {
   chat: ChatIcon,
+  voice: VoiceIcon,
+  spark: SparkIcon,
   cube: CubeIcon,
   discover: DiscoverIcon,
   build: BuildIcon,
